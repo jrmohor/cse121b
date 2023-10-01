@@ -21,9 +21,6 @@
     let subtract = function(number1, number2) {
         return number1 - number2;
         }
-    let subtractNumbers = function(subtract1, subtract2){ 
-        let subtractNumbers1 = Number(document.querySelector("#substract1").value);
-        let subtractNumbers2 = Number(document.querySelector("#substract2").value);
         
         document.querySelector("#difference").value = subtract(subtract1, subtract2);
     }
