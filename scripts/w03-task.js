@@ -7,50 +7,47 @@
        return number1 + number2; 
         }
     
-    function addNumber(add1, add2) {
+    function addNumber() {
         let addNumber1 = Number(document.querySelector('#add1').value);
-        let addNumber2 = Number(document.querySelector("#add2").value);
+        let addNumber2 = Number(document.querySelector('#add2').value);
         
-        document.querySelector("#sum").value = add(addNumber1, addNumber2);
+        document.querySelector('#sum').value = add(addNumber1, addNumber2);
     }
-
-    document.querySelector("#addNumbers").addEventListener('click', addNumber);
+    document.querySelector('#addNumbers').addEventListener('click', addNumber);
 
 /* Function Expression - Subtract Numbers */
 
-    let subtract = function(number1, number2) {
-        return number1 - number2;
+    let subtract = function (num1, num2) {
+        return num1 - num2;
         }
-        
-        document.querySelector("#difference").value = subtract(subtract1, subtract2);
+
+    function subtractNumbers() {
+            let num1 = Number(document.querySelector('subtract1').value);
+            let num2 = Number(document.querySelector('subtract2').value);
+
+            document.querySelector('difference').value = subtract(num1, num2);
     }
-    document.querySelector("#subtractNumbers").addEventListener('click', subtractNumbers);    
+    document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);    
 
 /* Arrow Function - Multiply Numbers */
 
-    let multiply = (factor1, factor2) => factor1 * factor2;
-
-    let multiplyNumbers = (factor1, factor2) => {
-        let multiplyNumbers1 = Number(document.querySelector('#factor1').value);
-        let multiplyNumbers2 = Number(document.querySelector('#factor2').value);
-        document.querySelector('#product').value = multiply(factor1, factor2);
+    let multiply = (number1, number2) => number1 * number2;
+    let multiplyNumbers = () => {
+        let multiplyNum1 = Number(document.querySelector('#factor1').value);
+        let multiplyNum2 = Number(document.querySelector('#factor2').value);
+        return document.querySelector('#product').value = multiply(multiplyNum1,multiplyNum2);
     }
-
     document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
 
 /* Open Function Use - Divide Numbers */
 
-    const divide = (number1, number2) => {
-        return number1 / number2;
-    };
-
-    const divideNumbers = (dividend, divisor) => {
-        const divideNumbers1 = Number(document.querySelector("#dividend").value);
-        const divideNumbers2 = Number(document.querySelector("#divisor").value);
-
-        document.querySelector("#quotient").value = divide(number1, number2);
-    };
-    document.querySelector("#divideNumbers").addEventListener('click', divideNumbers);
+    let divide = (number1, number2) => number1 / number2;
+    let divideNumbers = () => {
+        let divideNumb1 = Number(document.querySelector('#dividend').value);
+        let divideNumb2 = Number(document.querySelector('#divisor').value);
+        return document.querySelector('#quotient').value = divide(divideNumb1, divideNumb2);
+    }
+    document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 /* Decision Structure */
     let currentDate = new Date();
